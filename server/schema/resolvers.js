@@ -3,7 +3,8 @@ const {UserList,MovieList}=require('../FakeData');
 const _=require('lodash');
 const resolvers ={
     Query:{
-        users:()=>{
+        users:(parent,args,context)=>{
+            console.log(context);
             return UserList;
         },
         user:(parent,args)=>{
